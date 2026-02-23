@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CITI MOTORS - Parts & Services</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar-brand img {
+            height: 70px;
+        }
+
+        .nav-link-custom {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 6px 10px;
+            transition: 0.3s;
+        }
+
+        .nav-link-custom:hover, .dropdown-item:hover {
+            color: #E20000;
+        }
+
+        .active-link {
+            color: #E20000;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #E20000;
+        }
+
+        .branch-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.3s;
+        }
+
+        .branch-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .branch-card h5 {
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #1f00d1;
+        }
+
+        .branch-card p {
+            margin-bottom: 5px;
+        }
+
+        .branch-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Anchor spacing for dropdown links */
+        .anchor-offset {
+            position: relative;
+            top: -50px; /* Adjust based on navbar height */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar with Dropdown -->
+<nav class="navbar navbar-light bg-light shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+        <img src="C:\Users\Nelson\OneDrive\citimotorsweb\img\logo.png" alt="CITI MOTORS">
+    </a>
+
+    <!-- Navigation Links -->
+    <div class="d-flex gap-3 align-items-center">
+
+        <a href="index.html" class="nav-link-custom">Home</a>
+
+        <!-- About Us Dropdown -->
+        <div class="dropdown">
+            <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="aboutus.html#vision">Corporate Vision</a></li>
+                <li><a class="dropdown-item" href="aboutus.html#mission">Mission Statement</a></li>
+                <li><a class="dropdown-item" href="aboutus.html#history">Company History</a></li>
+            </ul>
+        </div>
+
+        <!-- Branches Dropdown -->
+        <div class="dropdown">
+            <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Branches
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="branch.html#makati">Makati (Head Office)</a></li>
+                <li><a class="dropdown-item" href="branch.html#laspinas">Las Piñas Office</a></li>
+                <li><a class="dropdown-item" href="branch.html#alabang">Alabang Office</a></li>
+            </ul>
+        </div>
+
+        <!-- Parts & Services Dropdown -->
+        <div class="dropdown">
+            <a class="nav-link-custom dropdown-toggle active-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Parts & Services
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#genuineparts">Genuine Parts</a></li>
+                <li><a class="dropdown-item" href="#bodyshop">Service & Body Shop</a></li>
+            </ul>
+        </div>
+
+        <a href="products.html" class="nav-link-custom">Products</a>
+        <a href="jobs.html" class="nav-link-custom">Jobs</a>
+        <a href="contactus.html" class="nav-link-custom">Contact Us</a>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Parts and Services Section -->
+<div class="container my-5">
+
+    <div class="d-flex flex-column gap-4">
+
+        <!-- Genuine Parts -->
+        <div id="genuineparts" class="anchor-offset branch-card d-flex flex-column flex-md-row align-items-center p-3 border rounded" style="max-width: 900px; margin:auto;">
+            <img src="C:\Users\Nelson\OneDrive\citimotorsweb\img\genuineparts.png" alt="Genuine Parts" class="branch-img me-md-4 mb-3 mb-md-0">
+            <div>
+                <h5>Genuine Parts</h5>
+                <p><strong>"Total Quality: Superior Parts from Superior Mitsubishi Motors Technology"</strong></p>
+                <p>
+                   Nowadays cheaply-made imitation parts flood the automotive market scene. Many go through these channels to save on costs, only to be spending more in the end from failure and incompatibility of these fake parts.
+                   Mitsubishi Genuine Parts are produced with unmatched and strict quality control. This guarantees that every part brings the highest standards of safety and performance.
+                   For all your vehicle's scheduled and unscheduled repair and replacement requirements, Citimotors, Inc. has genuine lubricants, engine, and body parts at very affordable prices.
+                </p>
+            </div>
+        </div>
+
+        <!-- Service and Body Shop -->
+        <div id="bodyshop" class="anchor-offset branch-card d-flex flex-column flex-md-row align-items-center p-3 border rounded" style="max-width: 900px; margin:auto;">
+            <div>
+                <h5>Service and Body Shop</h5>
+                <p><strong>5 Star Service & Body Shop</strong></p>
+                <p>
+                  Our multi-level service shop is staffed with highly-skilled and competent service personnel trained under Mitsubishi Motors standards. We use the latest and most advanced tools and diagnostic equipment to keep your vehicle in tip-top shape.
+                  We offer various services such as Mechanical, Electrical, Tinsmith/Painting, Underchassis, Wheel Alignment and Airconditioning repair. All services are available for both personal and warranty repairs. Accurate job estimates from our friendly Service Advisors are provided prior to servicing your vehicle.
+                  We also have an insurance section to handle insurance-related cases in the event that your vehicle requires body repair.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3">
+     © Copyright 2002-2026 CITIMOTORS, INC. All Rights Reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
