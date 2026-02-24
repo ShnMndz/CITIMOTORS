@@ -27,36 +27,85 @@
 <!-- Navbar -->
 <nav class="navbar navbar-light bg-light shadow-sm">
   <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand" href="index.html">
-        <img src="C:\Users\Nelson\OneDrive\citimotorsweb\img\logo.png" alt="CITI MOTORS">
+    <a class="navbar-brand" href="../index.html">
+        <img src="../img/logo.png" alt="CITI MOTORS">
     </a>
 
     <div class="d-flex gap-3 align-items-center">
-        <a href="index.html" class="nav-link-custom">Home</a>
-        <a href="aboutus.html" class="nav-link-custom">About Us</a>
-        <a href="branch.html" class="nav-link-custom">Branches</a>
-        <a href="products.html" class="nav-link-custom active-link">Products</a>
-        <a href="partsandservices.html" class="nav-link-custom">Parts & Services</a>
-        <a href="jobs.html" class="nav-link-custom">Jobs</a>
-        <a href="contactus.html" class="nav-link-custom">Contact Us</a>
+
+        <a href="../index.html" class="nav-link-custom">Home</a>
+
+        <!-- About Us Dropdown -->
+        <div class="dropdown">
+            <a class="nav-link-custom dropdown-toggle" href="#" data-bs-toggle="dropdown">About Us</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../aboutus/aboutus.html#vision">Corporate Vision</a></li>
+                <li><a class="dropdown-item" href="../aboutus/aboutus.html#mission">Mission Statement</a></li>
+                <li><a class="dropdown-item" href="../aboutus/aboutus.html#history">Company History</a></li>
+            </ul>
+        </div>
+
+        <!-- Branches Dropdown -->
+        <div class="dropdown">
+            <a class="nav-link-custom dropdown-toggle" href="#" data-bs-toggle="dropdown">Branches</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../branches/branch.html#makati">Makati (Head Office)</a></li>
+                <li><a class="dropdown-item" href="../branches/branch.html#laspinas">Las Piñas Office</a></li>
+                <li><a class="dropdown-item" href="../branches/branch.html#alabang">Alabang Office</a></li>
+            </ul>
+        </div>
+
+        <!-- Vehicles Dropdown -->
+        <div class="dropdown">
+            <a class="nav-link-custom dropdown-toggle active-link" href="#" data-bs-toggle="dropdown">
+    Products
+</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="products.html#commercial">Commercial Vehicles</a></li>
+                <li><a class="dropdown-item" href="products.html#passenger">Passenger Cars</a></li>
+                <li><a class="dropdown-item" href="products.html#trucks">Trucks and Buses</a></li>
+            </ul>
+        </div>
+
+        <!-- Parts & Services Dropdown -->
+        <div class="dropdown">
+            <a class="nav-link-custom dropdown-toggle" href="#" data-bs-toggle="dropdown">Parts & Services</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../partsandservices/partsandservices.html#genuineparts">Genuine Parts</a></li>
+                <li><a class="dropdown-item" href="../partsandservices/partsandservices.html#servicebody">Service & Body Shop</a></li>
+            </ul>
+        </div>
+
+        <!-- Jobs Dropdown -->
+        <div class="dropdown">
+            <a class="nav-link-custom dropdown-toggle" href="#" data-bs-toggle="dropdown">Jobs</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../jobs/jobs.html#accounting">Accounting Clerk</a></li>
+                <li><a class="dropdown-item" href="../jobs/jobs.html#credit">Credit & Collection Clerk</a></li>
+                <li><a class="dropdown-item" href="../jobs/jobs.html#insurance">Insurance Assistance Coordinator</a></li>
+                <li><a class="dropdown-item" href="../jobs/jobs.html#purchase">Purchasing Clerk</a></li>
+                <li><a class="dropdown-item" href="../jobs/jobs.html#sales">Sales Executives</a></li>
+                <li><a class="dropdown-item" href="../jobs/jobs.html#secretary">Secretary</a></li>
+            </ul>
+        </div>
+
+        <a href="../contacts/contactus.html" class="nav-link-custom">Contact Us</a>
     </div>
   </div>
 </nav>
 
 <!-- Category: Commercial Vehicles -->
-<section class="container my-5">
+<section id="commercial" class="container my-5">
     <h2 class="category-title text-primary">Commercial Vehicles</h2>
     <div class="row g-4">
-
         <!-- Vehicle Card Template -->
         <div class="col-md-4">
             <div class="card product-card h-100">
-                <a href="C:\Users\Nelson\OneDrive\citimotorsweb\web\products\vehicles\commercial\l200.html" class="text-decoration-none text-dark">
-                    <img src="C:\Users\Nelson\OneDrive\citimotorsweb\img\cv1.png" alt="CITI MOTORS Commercial Vehicle 1" class="card-img-top product-img">
+                <a href="../products/vehicles/commercial/l200.html" class="text-decoration-none text-dark">
+                    <img src="../img/cv1.png" alt="CITI MOTORS Commercial Vehicle 1" class="card-img-top product-img">
                     <div class="card-body">
-                        <h5 class="card-title">TRITON/L200</h5>
+                        <h5 class="card-title text-center">TRITON/L200</h5>
                         <ul class="list-unstyled mb-0">
-                            <li><strong>Price:</strong>₱820,000.00</li>
                         </ul>
                     </div>
                 </a>
@@ -65,12 +114,11 @@
 
         <div class="col-md-4">
             <div class="card product-card h-100">
-                <a href="C:\Users\Nelson\OneDrive\citimotorsweb\web\products\vehicles\commercial\l300fb.html" class="text-decoration-none text-dark">
-                    <img src="C:\Users\Nelson\OneDrive\citimotorsweb\img\cv2.png" alt="CITI MOTORS Commercial Vehicle 2" class="card-img-top product-img">
+                <a href="../products/vehicles/commercial/l300fb.html" class="text-decoration-none text-dark">
+                    <img src="../img/cv2.png" alt="CITI MOTORS Commercial Vehicle 2" class="card-img-top product-img">
                     <div class="card-body">
-                        <h5 class="card-title">L300 FB Exceed</h5>
+                        <h5 class="card-title text-center">L300 FB Exceed</h5>
                         <ul class="list-unstyled mb-0">
-                            <li><strong>Price:</strong>₱943,000.00</li>
                         </ul>
                     </div>
                 </a>
@@ -79,12 +127,11 @@
 
         <div class="col-md-4">
             <div class="card product-card h-100">
-                <a href="C:\Users\Nelson\OneDrive\citimotorsweb\web\products\vehicles\commercial\monterosport.html" class="text-decoration-none text-dark">
-                    <img src="C:\Users\Nelson\OneDrive\citimotorsweb\img\cv3.png" alt="CITI MOTORS Commercial Vehicle 3" class="card-img-top product-img">
+                <a href="../products/vehicles/commercial/monterosport.html" class="text-decoration-none text-dark">
+                    <img src="../img/cv3.png" alt="CITI MOTORS Commercial Vehicle 3" class="card-img-top product-img">
                     <div class="card-body">
-                        <h5 class="card-title">Montero Sport</h5>
+                        <h5 class="card-title text-center">Montero Sport</h5>
                         <ul class="list-unstyled mb-0">
-                            <li><strong>Price:</strong>₱2,482,000.00</li>
                         </ul>
                     </div>
                 </a>
@@ -93,13 +140,11 @@
 
         <div class="col-md-4">
             <div class="card product-card h-100">
-                <a href="commercial-vehicle-3.html" class="text-decoration-none text-dark">
-                    <img src="C:\Users\Nelson\OneDrive\citimotorsweb\img\cv4.png" alt="CITI MOTORS Commercial Vehicle 3" class="card-img-top product-img">
+                <a href="../products/vehicles/commercial/triton.html" class="text-decoration-none text-dark">
+                    <img src="../img/cv4.png" alt="CITI MOTORS Commercial Vehicle 4" class="card-img-top product-img">
                     <div class="card-body">
-                        <h5 class="card-title">Triton</h5>
+                        <h5 class="card-title text-center">Triton</h5>
                         <ul class="list-unstyled mb-0">
-                            <li><strong>Price:</strong> ₱1,350,000</li>
-                            <li><strong>Warranty:</strong> 3 years / 80,000 km</li>
                         </ul>
                     </div>
                 </a>
@@ -108,14 +153,11 @@
 
         <div class="col-md-4">
             <div class="card product-card h-100">
-                <a href="commercial-vehicle-3.html" class="text-decoration-none text-dark">
-                    <img src="C:\Users\Nelson\OneDrive\citimotorsweb\img\cv5.png" alt="CITI MOTORS Commercial Vehicle 3" class="card-img-top product-img">
+                <a href="../products/vehicles/commercial/xforce.html" class="text-decoration-none text-dark">
+                    <img src="../img/cv5.png" alt="CITI MOTORS Commercial Vehicle 5" class="card-img-top product-img">
                     <div class="card-body">
-                        <h5 class="card-title">Xforce</h5>
-                        <p class="card-text">Medium-sized delivery van for urban logistics.</p>
+                        <h5 class="card-title text-center">Xforce</h5>
                         <ul class="list-unstyled mb-0">
-                            <li><strong>Price:</strong> ₱1,350,000</li>
-                            <li><strong>Warranty:</strong> 3 years / 80,000 km</li>
                         </ul>
                     </div>
                 </a>
@@ -124,35 +166,30 @@
 
         <div class="col-md-4">
             <div class="card product-card h-100">
-                <a href="commercial-vehicle-3.html" class="text-decoration-none text-dark">
-                    <img src="C:\Users\Nelson\OneDrive\citimotorsweb\img\cv6.png" alt="CITI MOTORS Commercial Vehicle 3" class="card-img-top product-img">
+                <a href="../products/vehicles/commercial/xpander.html" class="text-decoration-none text-dark">
+                    <img src="../img/cv6.png" alt="CITI MOTORS Commercial Vehicle 6" class="card-img-top product-img">
                     <div class="card-body">
-                        <h5 class="card-title">Xpander</h5>
-                        <p class="card-text">Medium-sized delivery van for urban logistics.</p>
+                        <h5 class="card-title text-center">Xpander</h5>
                         <ul class="list-unstyled mb-0">
-                            <li><strong>Price:</strong> ₱1,350,000</li>
-                            <li><strong>Warranty:</strong> 3 years / 80,000 km</li>
                         </ul>
                     </div>
                 </a>
             </div>
-        </div>
-        
-   <!-- Passenger Cars -->
-<section class="container my-5">
+    </div>
+</section>
+
+<!-- Passenger Cars -->
+<section id="passenger" class="container my-5">
     <h2 class="category-title text-primary">Passenger Cars</h2>
     <div class="row g-4">
-
-        <!-- Passenger Car 1 -->
+         <!-- Passenger Car 1 -->
         <div class="col-md-4">
             <div class="card product-card h-100">
-                <a href="passenger-car-1.html" class="text-decoration-none text-dark">
-                    <img src="C:\Users\Nelson\OneDrive\citimotorsweb\img\pc1.png" alt="CITI MOTORS Passenger Car 1" class="card-img-top product-img">
+                <a href="../products/vehicles/passenger/mirage.html" class="text-decoration-none text-dark">
+                    <img src="../img/pc1.png" alt="CITI MOTORS Passenger Car 1" class="card-img-top product-img">
                     <div class="card-body">
-                        <h5 class="card-title">MIRAGE</h5>
-                        <p class="card-text">Comfortable and fuel-efficient city car.</p>
+                        <h5 class="card-title text-center">MIRAGE</h5>
                         <ul class="list-unstyled mb-0">
-                            <li><strong>Price:</strong> ₱1,400,000</li>
                         </ul>
                     </div>
                 </a>
@@ -162,14 +199,11 @@
         <!-- Passenger Car 2 -->
         <div class="col-md-4">
             <div class="card product-card h-100">
-                <a href="passenger-car-2.html" class="text-decoration-none text-dark">
-                    <img src="C:\Users\Nelson\OneDrive\citimotorsweb\img\pc2.png" alt="CITI MOTORS Passenger Car 2" class="card-img-top product-img">
+                <a href="../products/vehicles/passenger/mirageg4.html" class="text-decoration-none text-dark">
+                    <img src="../img/pc2.png" alt="CITI MOTORS Passenger Car 2" class="card-img-top product-img">
                     <div class="card-body">
-                        <h5 class="card-title">MIRAGE G4</h5>
-                        <p class="card-text">Spacious sedan with modern features for family use.</p>
+                        <h5 class="card-title text-center">MIRAGE G4</h5>
                         <ul class="list-unstyled mb-0">
-                            <li><strong>Price:</strong> ₱1,600,000</li>
-                            <li><strong>Warranty:</strong> 3 years / 100,000 km</li>
                         </ul>
                     </div>
                 </a>
@@ -179,23 +213,30 @@
     </div>
 </section>
 
- <!-- Trucks and Buses -->
- <section class="container my-5">
+<!-- Trucks and Buses -->
+<section id="trucks" class="container my-5">
     <h2 class="category-title text-primary">Trucks and Buses</h2>
     <div class="row g-4">
-
         <div class="col-md-4">
             <div class="card product-card h-100">
-                <a href="passenger-car-1.html" class="text-decoration-none text-dark">
-                    <img src="C:\Users\Nelson\OneDrive\citimotorsweb\img\t1.png" alt="CITI MOTORS Passenger Car 1" class="card-img-top product-img">
+                <a href="../products/vehicles/trucks/canter.html" class="text-decoration-none text-dark">
+                    <img src="../img/t1.png" alt="CITI MOTORS Passenger Car 1" class="card-img-top product-img">
                     <div class="card-body">
-                        <h5 class="card-title">Passenger Car 1</h5>
-                        <p class="card-text">Comfortable and fuel-efficient city car.</p>
+                        <h5 class="card-title text-center">CANTER</h5>
                         <ul class="list-unstyled mb-0">
-                            <li><strong>Price:</strong> ₱1,400,000</li>
-                            <li><strong>Warranty:</strong> 3 years / 100,000 km</li>
                         </ul>
                     </div>
                 </a>
-            </div>
-        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3">
+    © Copyright 2002-2026 CITIMOTORS, INC. All Rights Reserved.
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
