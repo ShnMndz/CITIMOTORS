@@ -43,6 +43,41 @@
             font-weight: bold;
             margin-top: 10px;
         }
+
+        /* HERO SECTION */
+.hero-brochure {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('img/background.png') center/cover no-repeat;
+}
+
+/* Brochure Cards */
+.brochure-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.brochure-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.brochure-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    text-align: center;
+}
+
+.brochure-card:hover img {
+    transform: scale(1.1);
+}
     </style>
 </head>
 <body>
@@ -130,74 +165,74 @@
     </div>
 </nav>
 
-<!-- Hero Carousel -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+<!-- HERO BROCHURE SECTION -->
+<section class="hero-brochure d-flex align-items-center text-white">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Drive Your Dream with CITIMOTORS</h1>
+        <p class="lead mt-3">Premium vehicles. Trusted service. Unmatched value.</p>
+        
+        <div class="mt-4">
+            <a href="products/products.html" class="btn btn-danger btn-lg me-2">
+                View Vehicles
+            </a>
+            <a href="contacts/contactus.html" class="btn btn-outline-light btn-lg">
+                Book a Test Drive
+            </a>
+        </div>
+    </div>
+</section>
 
-        <div class="carousel-item active">
-            <img src="img/background.png" class="d-block w-100" alt="Car 1" style="height:400px; object-fit:cover;">
-            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100 text-white">
-                <h1 class="fw-bold text-danger">Citimotors, Inc. is committed to customer satisfaction.</h1>
-                <p>Find your perfect car today!</p>
+
+<!-- FEATURED VEHICLES -->
+<section class="container my-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-danger">Featured Vehicles</h2>
+        <p class="text-muted">Explore our most popular models</p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Vehicle 1 -->
+        <div class="col-md-4">
+            <div class="brochure-card">
+                <img src="img/homecar1.png" class="img-fluid">
+                <div class="brochure-overlay">
+                    <h5>Triton / L200</h5>
+                    <a href="products/products.html#commercial" class="btn btn-sm btn-danger">
+                        Learn More
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="carousel-item">
-            <img src="img/background2.png" class="d-block w-100" alt="Car 2" style="height:400px; object-fit:cover;">
-            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100 text-white">
-                <h1 class="fw-bold text-danger">Explore our latest cars and models</h1>
-                <p>Quality and satisfaction guaranteed!</p>
+        <!-- Vehicle 2 -->
+        <div class="col-md-4">
+            <div class="brochure-card">
+                <img src="img/homecar2.png" class="img-fluid">
+                <div class="brochure-overlay">
+                    <h5>Montero Sport</h5>
+                    <a href="products/products.html#commercial" class="btn btn-sm btn-danger">
+                        Learn More
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="carousel-item">
-            <img src="img/background3.png" class="d-block w-100" alt="Car 3" style="height:400px; object-fit:cover;">
-            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100 text-white">
-                <h1 class="fw-bold text-danger">Your dream car is waiting for you</h1>
-                <p>Visit us today!</p>
+        <!-- Vehicle 3 -->
+        <div class="col-md-4">
+            <div class="brochure-card">
+                <img src="img/homecar3.png" class="img-fluid">
+                <div class="brochure-overlay">
+                    <h5>Mirage G4</h5>
+                    <a href="products/products.html#passenger" class="btn btn-sm btn-danger">
+                        Learn More
+                    </a>
+                </div>
             </div>
         </div>
 
     </div>
-
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
-</div>
-
-<!-- Cars Section -->
-<div class="container my-5">
-    <h2 class="text-center mb-4">
-        Visit our showrooms now and avail of big discounts!!!
-    </h2>
-
-    <div class="row text-center g-4">
-
-        <div class="col-md-4">
-            <div class="card">
-                <img src="img/homecar1.png" class="card-img-top" alt="Car 1">
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card">
-                <img src="img/homecar2.png" class="card-img-top" alt="Car 2">
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card">
-                <img src="img/homecar3.png" class="card-img-top" alt="Car 3">
-            </div>
-        </div>
-
-    </div>
-</div>
+</section>
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center p-3">
