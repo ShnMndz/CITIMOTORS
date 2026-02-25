@@ -6,34 +6,248 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        body { font-family: Arial, sans-serif; }
-        .navbar-brand img { height: 70px; }
-        .nav-link-custom { text-decoration: none; color: #333; font-weight: 500; padding: 6px 10px; transition: 0.3s; }
-        .nav-link-custom:hover, .dropdown-item:hover { color: #E20000; }
-        .active-link { color: #E20000; font-weight: bold; }
-        .section-title { font-weight: bold; margin-bottom: 40px; color: #E20000; }
-        .category-title { color: #0032bd; margin-top: 30px; margin-bottom: 20px; }
-        .product-card { border: 1px solid #ddd; border-radius: 8px; padding: 20px; transition: 0.3s ease; background: #fff; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .product-img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; }
-        .product-info { margin-top: 10px; }
-        footer { margin-top: 60px; }
-    </style>
+/* ===== Category Titles ===== */
+.category-title {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ===== Product Cards ===== */
+.product-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+    transform: scale(1.05);
+}
+
+.product-card .card-body {
+    text-align: center;
+    padding: 15px;
+}
+
+.product-card .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0032bd;
+}
+
+.product-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-card a {
+    text-decoration: none;
+}
+
+/* ===== Responsive Grid Spacing ===== */
+@media (max-width: 768px) {
+    .product-card img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-card img {
+        height: 150px;
+    }
+}
+        
+/* ===== Global ===== */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8fafc;
+    scroll-behavior: smooth;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.9) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar-brand img {
+    height: 70px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+/* Links */
+.nav-link-custom {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    color: #E20000;
+    background: rgba(226,0,0,0.08);
+}
+
+.active-link {
+    color: #E20000;
+    font-weight: bold;
+    background: rgba(226,0,0,0.1);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: #E20000;
+    color: #fff;
+}
+
+/* ===== Sections ===== */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+section:nth-child(1) { animation-delay: 0.2s; }
+section:nth-child(2) { animation-delay: 0.4s; }
+section:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+/* ===== Images ===== */
+img {
+    transition: all 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+.history-img {
+    width: 300px;
+    float: left;
+    margin: 0 25px 15px 0;
+    border-radius: 12px;
+}
+
+/* ===== Cards Feel ===== */
+#vision,
+#history {
+    border-radius: 20px;
+    margin: 40px auto;
+}
+
+/* ===== Mission Box ===== */
+#mission {
+    background: #fff;
+    padding: 50px 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== Footer ===== */
+footer {
+    background: linear-gradient(135deg, #111, #222);
+    letter-spacing: 1px;
+    margin-top: 80px;
+}
+
+/* ===== Scrollbar (Chrome) ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E20000;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+/* ===== NAVBAR PRIORITY FIX ===== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+/* Keep content behind navbar */
+section {
+    position: relative;
+    z-index: 1;
+}
+
+/* Dropdown always on top */
+.dropdown-menu {
+    z-index: 10000;
+}
+</style>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-light bg-light shadow-sm">
   <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../home.html">
         <img src="../img/logo.png" alt="CITI MOTORS">
     </a>
 
     <div class="d-flex gap-3 align-items-center">
 
-        <a href="../index.html" class="nav-link-custom">Home</a>
+        <a href="../home.html" class="nav-link-custom">Home</a>
 
         <!-- About Us Dropdown -->
         <div class="dropdown">
@@ -96,17 +310,15 @@
 
 <!-- Category: Commercial Vehicles -->
 <section id="commercial" class="container my-5">
-    <h2 class="category-title text-primary">Commercial Vehicles</h2>
+    <h2 class="category-title" style="color: black;">COMMERCIAL CARS</h2>
     <div class="row g-4">
         <!-- Vehicle Card Template -->
         <div class="col-md-4">
             <div class="card product-card h-100">
                 <a href="../products/vehicles/commercial/l200.html" class="text-decoration-none text-dark">
-                    <img src="../img/cv1.png" alt="CITI MOTORS Commercial Vehicle 1" class="card-img-top product-img">
+                    <img src="../img/cv1.png" alt="CITI MOTORS Commercial Vehicle 1">
                     <div class="card-body">
-                        <h5 class="card-title text-center">TRITON/L200</h5>
-                        <ul class="list-unstyled mb-0">
-                        </ul>
+                        <h5 class="card-title text-dark">TRITON/L200</h5>
                     </div>
                 </a>
             </div>
@@ -115,11 +327,9 @@
         <div class="col-md-4">
             <div class="card product-card h-100">
                 <a href="../products/vehicles/commercial/l300fb.html" class="text-decoration-none text-dark">
-                    <img src="../img/cv2.png" alt="CITI MOTORS Commercial Vehicle 2" class="card-img-top product-img">
+                    <img src="../img/cv2.png" alt="CITI MOTORS Commercial Vehicle 2">
                     <div class="card-body">
-                        <h5 class="card-title text-center">L300 FB Exceed</h5>
-                        <ul class="list-unstyled mb-0">
-                        </ul>
+                        <h5 class="card-title text-dark">L300 FB Exceed</h5>
                     </div>
                 </a>
             </div>
@@ -128,11 +338,9 @@
         <div class="col-md-4">
             <div class="card product-card h-100">
                 <a href="../products/vehicles/commercial/monterosport.html" class="text-decoration-none text-dark">
-                    <img src="../img/cv3.png" alt="CITI MOTORS Commercial Vehicle 3" class="card-img-top product-img">
+                    <img src="../img/cv3.png" alt="CITI MOTORS Commercial Vehicle 3">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Montero Sport</h5>
-                        <ul class="list-unstyled mb-0">
-                        </ul>
+                        <h5 class="card-title text-dark">Montero Sport</h5>
                     </div>
                 </a>
             </div>
@@ -141,11 +349,9 @@
         <div class="col-md-4">
             <div class="card product-card h-100">
                 <a href="../products/vehicles/commercial/triton.html" class="text-decoration-none text-dark">
-                    <img src="../img/cv4.png" alt="CITI MOTORS Commercial Vehicle 4" class="card-img-top product-img">
+                    <img src="../img/cv4.png" alt="CITI MOTORS Commercial Vehicle 4">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Triton</h5>
-                        <ul class="list-unstyled mb-0">
-                        </ul>
+                        <h5 class="card-title text-dark">Triton</h5>
                     </div>
                 </a>
             </div>
@@ -154,11 +360,9 @@
         <div class="col-md-4">
             <div class="card product-card h-100">
                 <a href="../products/vehicles/commercial/xforce.html" class="text-decoration-none text-dark">
-                    <img src="../img/cv5.png" alt="CITI MOTORS Commercial Vehicle 5" class="card-img-top product-img">
+                    <img src="../img/cv5.png" alt="CITI MOTORS Commercial Vehicle 5">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Xforce</h5>
-                        <ul class="list-unstyled mb-0">
-                        </ul>
+                        <h5 class="card-title text-dark">Xforce</h5>
                     </div>
                 </a>
             </div>
@@ -167,66 +371,58 @@
         <div class="col-md-4">
             <div class="card product-card h-100">
                 <a href="../products/vehicles/commercial/xpander.html" class="text-decoration-none text-dark">
-                    <img src="../img/cv6.png" alt="CITI MOTORS Commercial Vehicle 6" class="card-img-top product-img">
+                    <img src="../img/cv6.png" alt="CITI MOTORS Commercial Vehicle 6">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Xpander</h5>
-                        <ul class="list-unstyled mb-0">
-                        </ul>
+                        <h5 class="card-title text-dark">Xpander</h5>
                     </div>
                 </a>
             </div>
+        </div>
     </div>
 </section>
 
 <!-- Passenger Cars -->
 <section id="passenger" class="container my-5">
-    <h2 class="category-title text-primary">Passenger Cars</h2>
+    <h2 class="category-title" style="color: black;">PASSENGER CARS</h2>
     <div class="row g-4">
-         <!-- Passenger Car 1 -->
         <div class="col-md-4">
             <div class="card product-card h-100">
                 <a href="../products/vehicles/passenger/mirage.html" class="text-decoration-none text-dark">
-                    <img src="../img/pc1.png" alt="CITI MOTORS Passenger Car 1" class="card-img-top product-img">
+                    <img src="../img/pc1.png" alt="CITI MOTORS Passenger Car 1">
                     <div class="card-body">
-                        <h5 class="card-title text-center">MIRAGE</h5>
-                        <ul class="list-unstyled mb-0">
-                        </ul>
+                        <h5 class="card-title text-dark">MIRAGE</h5>
                     </div>
                 </a>
             </div>
         </div>
 
-        <!-- Passenger Car 2 -->
         <div class="col-md-4">
             <div class="card product-card h-100">
                 <a href="../products/vehicles/passenger/mirageg4.html" class="text-decoration-none text-dark">
-                    <img src="../img/pc2.png" alt="CITI MOTORS Passenger Car 2" class="card-img-top product-img">
+                    <img src="../img/pc2.png" alt="CITI MOTORS Passenger Car 2">
                     <div class="card-body">
-                        <h5 class="card-title text-center">MIRAGE G4</h5>
-                        <ul class="list-unstyled mb-0">
-                        </ul>
+                        <h5 class="card-title text-dark">MIRAGE G4</h5>
                     </div>
                 </a>
             </div>
         </div>
-
     </div>
 </section>
 
 <!-- Trucks and Buses -->
 <section id="trucks" class="container my-5">
-    <h2 class="category-title text-primary">Trucks and Buses</h2>
+    <h2 class="category-title" style="color: black;">TRUCKS AND BUSES</h2>
     <div class="row g-4">
         <div class="col-md-4">
             <div class="card product-card h-100">
                 <a href="../products/vehicles/trucks/canter.html" class="text-decoration-none text-dark">
-                    <img src="../img/t1.png" alt="CITI MOTORS Passenger Car 1" class="card-img-top product-img">
+                    <img src="../img/t1.png" alt="CITI MOTORS Truck 1">
                     <div class="card-body">
-                        <h5 class="card-title text-center">CANTER</h5>
-                        <ul class="list-unstyled mb-0">
-                        </ul>
+                        <h5 class="card-title text-center text-dark">CANTER</h5>
                     </div>
                 </a>
+            </div>
+        </div>
     </div>
 </section>
 

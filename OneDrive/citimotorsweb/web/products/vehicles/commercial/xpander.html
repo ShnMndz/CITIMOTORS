@@ -8,34 +8,186 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        body { font-family: Arial, sans-serif; }
-        .navbar-brand img { height: 70px; }
-        .nav-link-custom { text-decoration: none; color: #333; font-weight: 500; padding: 6px 10px; transition: 0.3s; }
-        .nav-link-custom:hover, .dropdown-item:hover { color: #E20000; }
-        .active-link { color: #E20000; font-weight: bold; }
-        .product-title { font-weight: bold; color: #0032bd; margin-top: 20px; }
-        .product-img { width: 100%; max-width: 500px; object-fit: cover; border-radius: 6px; }
-        .product-details { margin-top: 20px; }
-        footer { margin-top: 60px; }
+        /* ===== Global ===== */
+        html, body {
+            height: 100%;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f8fafc;
+            scroll-behavior: smooth;
+            margin: 0;
+        }
+
+        /* ===== Navbar ===== */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.95) !important;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        .navbar-brand img {
+            height: 70px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-link-custom {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link-custom:hover {
+            color: #E20000;
+            background: rgba(226,0,0,0.08);
+        }
+
+        .active-link {
+            color: #E20000;
+            font-weight: bold;
+            background: rgba(226,0,0,0.1);
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            z-index: 10000;
+        }
+
+        .dropdown-item {
+            padding: 10px 16px;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            background: #E20000;
+            color: #fff;
+        }
+
+        /* ===== Sections & Animations ===== */
+        section {
+            opacity: 0;
+            transform: translateY(30px);
+            position: relative;
+            z-index: 1;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        section:nth-child(1) { animation-delay: 0.2s; }
+        section:nth-child(2) { animation-delay: 0.4s; }
+        section:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== Product Page ===== */
+        .product-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #0032bd;
+        }
+
+        .product-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .product-details {
+            padding-left: 15px;
+        }
+
+        .product-details ul {
+            padding-left: 20px;
+        }
+
+        .product-details li {
+            margin-bottom: 10px;
+        }
+
+        .btn-primary {
+            border-radius: 50px;
+            padding: 10px 28px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: linear-gradient(135deg, #111, #222);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 80px;
+            letter-spacing: 1px;
+        }
+
+        /* ===== Scrollbar ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #E20000;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #eee;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .product-details {
+                padding-left: 0;
+                margin-top: 20px;
+            }
+
+            .product-title {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-light bg-light shadow-sm">
-  <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand" href="index.html">
-        <img src="img/logo.png" alt="CITI MOTORS">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap">
+    <a class="navbar-brand" href="../../../home.html">
+        <img src="../../../img/logo.png" alt="CITI MOTORS">
     </a>
 
-    <div class="d-flex gap-3 align-items-center">
-        <a href="index.html" class="nav-link-custom">Home</a>
-        <a href="aboutus.html" class="nav-link-custom">About Us</a>
-        <a href="branch.html" class="nav-link-custom">Branches</a>
-        <a href="products.html" class="nav-link-custom active-link">Products</a>
-        <a href="partsandservices.html" class="nav-link-custom">Parts & Services</a>
-        <a href="jobs.html" class="nav-link-custom">Jobs</a>
-        <a href="contactus.html" class="nav-link-custom">Contact Us</a>
+    <div class="d-flex gap-3 align-items-center flex-wrap">
+        <a href="../../../index.html" class="nav-link-custom">Home</a>
+        <a href="../../../aboutus.html" class="nav-link-custom">About Us</a>
+        <a href="../../../branches/branch.html" class="nav-link-custom">Branches</a>
+        <a href="../../../products.html" class="nav-link-custom active-link">Products</a>
+        <a href="../../../partsandservices.html" class="nav-link-custom">Parts & Services</a>
+        <a href="../../../jobs.html" class="nav-link-custom">Jobs</a>
+        <a href="../../../contactus.html" class="nav-link-custom">Contact Us</a>
     </div>
   </div>
 </nav>
@@ -43,27 +195,35 @@
 <!-- Product Details -->
 <section class="container my-5">
     <h2 class="product-title">X PANDER</h2>
-    <div class="row g-4">
+    <div class="row g-4 align-items-center">
         <div class="col-md-6">
-            <img src="../../../img/cv6.png" alt="Commercial Vehicle 6S" class="product-img">
+            <img src="../../../img/cv6.png" alt="X PANDER" class="product-img">
         </div>
         <div class="col-md-6 product-details">
             <p><strong>Description:</strong></p>
-            <p>The Xpander is a 7 Seater MPV and has a length of 4595 mm the width of 1750 mm, and a wheelbase of 2775 mm. along with a ground clearance of 225 mm.</p>
+            <p>The Xpander is a 7-seater MPV with a length of 4595 mm, width of 1750 mm, wheelbase of 2775 mm, and ground clearance of 225 mm. Perfect for family trips or urban driving.</p>
             <ul>
                 <li><strong>Price:</strong> ₱1,297,000.00</li>
-                <P>XPANDER CROSS 1.5G 2WD AT OUTDOOR EDITIONS</P>
-                <li><strong>XPANDER CROSS 1.5G 2WD AT TWOTONE:  </strong>₱1,266,000.00</li>
-                <li><strong>XPANDER CROSS 1.5G 2WD AT MONOTONE: </strong>₱2,080,000.00</li>
-                <li><strong>XPANDER GLS 1.5G 2WD AT: </strong>₱ 1,799,000.00</li>
-                <li><strong>XPANDER GLX 1.5G 2WD AT: </strong>₱ 1,303,000.00</li>
-                <li><strong>XPANDER GLX 1.5G 2WD MT: </strong>₱ 978,000.00</li>
-                <p><strong>Warranty: 36 months or 100,000 kms.</strong></p>
+                <p>XPANDER CROSS 1.5G 2WD AT OUTDOOR EDITIONS</p>
+                <li><strong>XPANDER CROSS 1.5G 2WD AT TWOTONE:</strong> ₱1,266,000.00</li>
+                <li><strong>XPANDER CROSS 1.5G 2WD AT MONOTONE:</strong> ₱2,080,000.00</li>
+                <li><strong>XPANDER GLS 1.5G 2WD AT:</strong> ₱1,799,000.00</li>
+                <li><strong>XPANDER GLX 1.5G 2WD AT:</strong> ₱1,303,000.00</li>
+                <li><strong>XPANDER GLX 1.5G 2WD MT:</strong> ₱978,000.00</li>
+                <li><strong>Warranty:</strong> 36 months or 100,000 kms</li>
             </ul>
-            <a href="../../products.html" class="btn btn-primary mt-3">Back to Products</a>
+            <a href="../../products.html" class="btn btn-primary mt-3">Return to Vehicles</a>
         </div>
     </div>
 </section>
+
+<!-- Footer -->
+<footer>
+    © Copyright 2002-2026 CITIMOTORS, INC. All Rights Reserved.
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
