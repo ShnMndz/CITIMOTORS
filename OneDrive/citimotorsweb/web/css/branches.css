@@ -1,0 +1,124 @@
+      /* ===== Branch Panels ===== */
+        .branch-panel {
+    min-height: 100vh;           /* full viewport height */
+    background: linear-gradient(135deg, #111, #222);
+    display: flex;
+    align-items: flex-start;      /* top align to remove extra white space */
+    justify-content: center;
+    padding-top: 50px;            /* optional top spacing inside panel */
+    padding-bottom: 50px;
+}
+
+.branch-info {
+    max-width: 500px;
+}
+
+        /* ===== Vision Split Section ===== */
+        .vision-section {
+            min-height: 100vh;
+        }
+
+        .vision-text {
+            background: #000;
+            color: #fff;
+            padding: 80px 60px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .vision-text h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .vision-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .vision-section .row {
+            min-height: 100vh;
+        }
+
+        .vision-map {
+            height: 100vh;
+            padding: 0;
+        }
+
+        .vision-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        /* ===== Global ===== */
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f8fafc;
+            scroll-behavior: smooth;
+        }
+
+        /* ===== Navbar ===== */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.9) !important;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .navbar-brand img {
+            height: 70px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-link-custom {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link-custom:hover {
+            color: #E20000;
+            background: rgba(226,0,0,0.08);
+        }
+
+        .active-link {
+            color: #E20000;
+            font-weight: bold;
+            background: rgba(226,0,0,0.1);
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .dropdown-item {
+            padding: 10px 16px;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            background: #E20000;
+            color: #fff;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: linear-gradient(135deg, #111, #222);
+            letter-spacing: 1px;
+            margin-top: 80px;
+        }

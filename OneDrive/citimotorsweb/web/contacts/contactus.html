@@ -6,148 +6,8 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contactus.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-            <style>
-/* ===== Global ===== */
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f8fafc;
-    scroll-behavior: smooth;
-}
-
-/* ===== Navbar ===== */
-.navbar {
-    backdrop-filter: blur(10px);
-    background: rgba(255,255,255,0.9) !important;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.navbar-brand img {
-    height: 70px;
-    transition: transform 0.3s ease;
-}
-
-.navbar-brand img:hover {
-    transform: scale(1.05);
-}
-
-/* Links */
-.nav-link-custom {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-
-.nav-link-custom:hover {
-    color: #E20000;
-    background: rgba(226,0,0,0.08);
-}
-
-.active-link {
-    color: #E20000;
-    font-weight: bold;
-    background: rgba(226,0,0,0.1);
-}
-
-/* Dropdown */
-.dropdown-menu {
-    border: none;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.dropdown-item {
-    padding: 10px 16px;
-    transition: all 0.2s ease;
-}
-
-.dropdown-item:hover {
-    background: #E20000;
-    color: #fff;
-}
-
-/* ===== Sections ===== */
-section {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.8s ease forwards;
-}
-
-section:nth-child(1) { animation-delay: 0.2s; }
-section:nth-child(2) { animation-delay: 0.4s; }
-section:nth-child(3) { animation-delay: 0.6s; }
-
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.section-title {
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-}
-
-/* ===== Images ===== */
-img {
-    transition: all 0.4s ease;
-}
-
-img:hover {
-    transform: scale(1.03);
-}
-
-.history-img {
-    width: 300px;
-    float: left;
-    margin: 0 25px 15px 0;
-    border-radius: 12px;
-}
-
-/* ===== Cards Feel ===== */
-#vision,
-#history {
-    border-radius: 20px;
-    margin: 40px auto;
-}
-
-/* ===== Mission Box ===== */
-#mission {
-    background: #fff;
-    padding: 50px 30px;
-    border-radius: 20px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-/* ===== Footer ===== */
-footer {
-    background: linear-gradient(135deg, #111, #222);
-    letter-spacing: 1px;
-    margin-top: 80px;
-}
-
-/* ===== Scrollbar (Chrome) ===== */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #E20000;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #eee;
-}
-</style>
 </head>
 <body>
 
@@ -230,42 +90,30 @@ footer {
   </div>
 </nav>
 
-<!-- Contact Section -->
-<div class="container my-5">
-    <h2 class="text-center section-title">For inquiries and appointments please contact:</h2>
+<!-- Corporate Vision Section -->
+<div id="vision" class="vision-section">
+    <div class="container-fluid p-0">
+        <div class="row g-0 align-items-center">
 
-    <div class="d-flex flex-column gap-4">
+            <!-- Left: Text Area -->
+            <div class="col-md-6 vision-text">
+                <h1>CONTACT US</h1>
+                <p style="color: #333;"><strong>For inquiries and appointments, please contact:</strong></p>
+                <p>
+                <p class="mb-1"><strong>Address:</strong> Don Bosco St. cor. Chino Roces Ave. (Formerly Pasong Tamo St.), Makati City</p>
+                <p class="mb-1"><strong>Email:</strong> <a href="mailto:ctcitimotorsinc.makati@gmail.com">ctcitimotorsinc.makati@gmail.com</a></p>
+                <p class="mb-1"><strong>Contact:</strong> 0955-054-9087</p>
+                <p class="mb-1"><strong>Service:</strong> (02) 892 0331 loc. 455 or 456</p>
+                <p class="mb-1"><strong>Parts:</strong> (02) 892 0331 loc. 444 or 445</p>
+                <p class="mb-0"><strong>Insurance Dept.:</strong> 0998-951-8915 / 0998-859-6705</p>
 
-        <!-- Branch 1 -->
-        <div class="branch-card d-flex flex-column flex-md-row align-items-center p-4 border rounded" style="max-width: 900px; margin:auto;">
-            
-            <img src="../img/contactus.png" alt="Makati Branch" class="branch-img me-md-4 mb-3 mb-md-0">
-
-            <div class="text-center text-md-start">
-                <h5 class="fw-bold text-primary">CT CITIMOTORS MAKATI INC.</h5>
-                <p><strong>Don Bosco St. cor. Chino Roces Ave. Formerly Pasong Tamo St. Makati, City</strong></p>
-                <p>Email: ctcitimotorsinc.makati@gmail.com </p>
-                <p>Contact: 0955-054-9087</p>
-                <p>Service:(028) 892 0331 loc. 455 or 456</p>
-                <p>Parts:  (028) 892 0331 loc. 444 or 445</p>
-                <p>Insurance Dept. :  09989518915 / 09988596705</p>
+                </p>
             </div>
+
+            <!-- Right: Image -->
+            <div class="col-md-6 vision-image"></div>
+
         </div>
-
-<!-- Map Section -->
-<div class="container my-5">
-    <h2 class="text-center section-title">Our Branch Locations</h2>
-
-    <div style="max-width: 900px; margin: auto; margin-top: 20px;">
-        <iframe
-            src="https://www.google.com/maps/d/embed?mid=1nmpFLLBqTIgyeb0XZfqMuM3yAquMJZU&ehbc=2E312F"
-            width="100%"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
     </div>
 </div>
 

@@ -1,0 +1,185 @@
+
+    /* ===== Vision Split Section ===== */
+
+.vision-section {
+    min-height: 100vh;
+}
+
+/* Left Side */
+.vision-text {
+    background: #000;
+    color: #fff;
+    padding: 80px 60px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vision-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.vision-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Right Side Image */
+.vision-image {
+    min-height: 100vh;
+
+    background: url('../img/ourvisionpic.png') center/cover no-repeat;
+}
+
+/* ===== Mission Split Section ===== */
+
+.mission-section {
+    min-height: 100vh;
+}
+
+/* Right Side Text */
+.mission-text {
+    background: #fff;
+    color: #222;
+    padding: 80px 60px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mission-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #0032bd;
+}
+
+.mission-text ol {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+.mission-text li {
+    margin-bottom: 15px;
+}
+
+/* Left Side Image */
+.mission-image {
+    min-height: 100vh;
+
+    background: url('../img/mission.png') center/cover no-repeat;
+}
+
+/* ===== History Background Section ===== */
+
+.history-section {
+    min-height: 100vh;
+    position: relative;
+
+    background: url('../img/historypic.png') center/cover no-repeat;
+}
+
+/* Overlay */
+.history-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Text */
+.history-section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.history-text {
+    max-width: 900px;
+    margin: auto;
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+/* ===== Global ===== */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8fafc;
+    scroll-behavior: smooth;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.9) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar-brand img {
+    height: 70px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+/* Links */
+.nav-link-custom {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    color: #E20000;
+    background: rgba(226,0,0,0.08);
+}
+
+.active-link {
+    color: #E20000;
+    font-weight: bold;
+    background: rgba(226,0,0,0.1);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: #E20000;
+    color: #fff;
+}
+
+
+/* ===== Scrollbar (Chrome) ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E20000;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee;
+}
