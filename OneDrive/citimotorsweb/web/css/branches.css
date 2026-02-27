@@ -1,4 +1,25 @@
-      /* ===== Branch Panels ===== */
+ /* ===== Page Fade In Animation ===== */
+
+body {
+    animation: pageFadeIn 1.2s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* Keyframes */
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}   
+    
+    
+    
+    /* ===== Branch Panels ===== */
         .branch-panel {
     min-height: 100vh;           /* full viewport height */
     background: linear-gradient(135deg, #111, #222);
@@ -57,11 +78,15 @@
         }
 
         /* ===== Global ===== */
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #f8fafc;
-            scroll-behavior: smooth;
-        }
+       body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8fafc;
+    scroll-behavior: smooth;
+
+    /* Fade In Animation */
+    animation: pageFadeIn 1.2s ease-in-out forwards;
+    opacity: 0;
+}
 
         /* ===== Navbar ===== */
         .navbar {

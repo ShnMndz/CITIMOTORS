@@ -1,3 +1,22 @@
+/* ===== Page Fade In Animation ===== */
+
+body {
+    animation: pageFadeIn 1.2s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* Keyframes */
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .job-card {
         background-color: #fff;
         color: #212529;
@@ -26,10 +45,13 @@
     }
 /* ===== Global ===== */
 body {
-    font-family: "Poppins", Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background: #f8fafc;
     scroll-behavior: smooth;
-    line-height: 1.6;
+
+    /* Fade In Animation */
+    animation: pageFadeIn 1.2s ease-in-out forwards;
+    opacity: 0;
 }
 
 /* ===== Navbar ===== */
@@ -105,4 +127,112 @@ section { margin: 60px 0; }
 /* Responsive spacing */
 @media (max-width: 768px) {
     .job-card { margin-bottom: 30px; }
+}
+/* ===== Mitsubishi Careers Layout ===== */
+
+/* Job Card Base */
+.job-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 28px;
+    border-left: 5px solid #E20000; /* Mitsubishi Red */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: all 0.35s ease;
+}
+
+/* Hover Effect */
+.job-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(226,0,0,0.18);
+}
+
+/* Job Title */
+.job-card h4 {
+    color: #111;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Section Labels */
+.job-card h6 {
+    font-weight: 600;
+    color: #E20000;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.8px;
+}
+
+/* List Styling */
+.job-card ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.job-card ul li {
+    margin-bottom: 6px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Apply Button */
+.job-card .apply-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 26px;
+    background: linear-gradient(135deg, #E20000, #b80000);
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.job-card .apply-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(226,0,0,0.4);
+    background: linear-gradient(135deg, #b80000, #900000);
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #111;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/* Red underline under title */
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #E20000;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* Footer Style */
+footer {
+    background: #111;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+body {
+    padding-top: 10px;
+}
+
+.navbar {
+    z-index: 99;
 }
