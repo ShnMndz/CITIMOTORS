@@ -44,16 +44,9 @@
         </div>
 
         <!-- Vehicles Dropdown -->
-        <div class="dropdown">
-            <a class="nav-link-custom dropdown-toggle active-link" href="#" data-bs-toggle="dropdown">
+        <a class="nav-link-custom active-link" href="products.html">
     Products
 </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="products.html#commercial">Commercial Vehicles</a></li>
-                <li><a class="dropdown-item" href="products.html#passenger">Passenger Cars</a></li>
-                <li><a class="dropdown-item" href="products.html#trucks">Trucks and Buses</a></li>
-            </ul>
-        </div>
 
         <!-- Parts & Services Dropdown -->
         <div class="dropdown">
@@ -82,102 +75,113 @@
   </div>
 </nav>
 
-<!--COMMERCIAL CARS-->
-<section class="container my-5">
- <section id="commercial" class="container my-5">
-    <h2 class="text-center fw-bold mb-5">COMMERCIAL VEHICLES</h2>
-    <div class="row text-center g-5">
+<!-- Search & Filters -->
+<div class="container my-4">
+    <div class="row g-3 justify-content-center align-items-center">
 
-        <div class="col-md-4">
+     <!-- Search Bar -->
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <input 
+                type="text" 
+                id="productSearch" 
+                class="form-control form-control-lg"
+                placeholder="Search for vehicles..."
+                onkeyup="searchProducts()"
+            >
+        </div>
+    </div>
+</div>
+
+<!-- PRODUCTS GRID -->
+<section class="container my-5">
+
+    <div class="row text-center g-4" id="productsGrid">
+
+        <!-- DESTINATOR -->
+        <div class="col-lg-4 col-md-6 col-sm-12 product-item">
             <a href="../products/vehicles/commercial/l200/l200.html" class="text-decoration-none text-dark">
-                <img src="../img/cv1.png" class="img-fluid mb-3" alt="Triton / L200">
-                <h5 class="fw-bold">TRITON / L200</h5>
+                <img src="../img/cv1.png" class="img-fluid mb-3">
+                <h5 class="fw-bold">DESTINATOR</h5>
                 <p class="text-muted">From ₱1,134,000</p>
             </a>
         </div>
 
-        <div class="col-md-4">
+        <!-- L300 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 product-item">
             <a href="../products/vehicles/commercial/l300/l300fb.html" class="text-decoration-none text-dark">
-                <img src="../img/cv2.png" class="img-fluid mb-3" alt="L300 FB Exceed">
+                <img src="../img/cv2.png" class="img-fluid mb-3">
                 <h5 class="fw-bold">L300 FB EXCEED</h5>
                 <p class="text-muted">From ₱1,014,000</p>
             </a>
         </div>
 
-        <div class="col-md-4">
+        <!-- MONTERO -->
+        <div class="col-lg-4 col-md-6 col-sm-12 product-item">
             <a href="../products/vehicles/commercial/monterosport/monterosport.html" class="text-decoration-none text-dark">
-                <img src="../img/cv3.png" class="img-fluid mb-3" alt="Montero Sport">
+                <img src="../img/cv3.png" class="img-fluid mb-3">
                 <h5 class="fw-bold">MONTERO SPORT</h5>
                 <p class="text-muted">From ₱1,568,000</p>
             </a>
         </div>
 
-        <div class="col-md-4">
+        <!-- TRITON -->
+        <div class="col-lg-4 col-md-6 col-sm-12 product-item">
             <a href="../products/vehicles/commercial/triton/triton.html" class="text-decoration-none text-dark">
-                <img src="../img/cv4.png" class="img-fluid mb-3" alt="Triton">
+                <img src="../img/cv4.png" class="img-fluid mb-3">
                 <h5 class="fw-bold">TRITON</h5>
                 <p class="text-muted">From ₱1,134,000</p>
             </a>
         </div>
 
-        <div class="col-md-4">
+        <!-- XFORCE -->
+        <div class="col-lg-4 col-md-6 col-sm-12 product-item">
             <a href="../products/vehicles/commercial/xforce/xforce.html" class="text-decoration-none text-dark">
-                <img src="../img/cv5.png" class="img-fluid mb-3" alt="XForce">
+                <img src="../img/cv5.png" class="img-fluid mb-3">
                 <h5 class="fw-bold">XFORCE</h5>
                 <p class="text-muted">From ₱1,367,000</p>
             </a>
         </div>
 
-        <div class="col-md-4">
+        <!-- XPANDER -->
+        <div class="col-lg-4 col-md-6 col-sm-12 product-item">
             <a href="../products/vehicles/commercial/xpander/xpander.html" class="text-decoration-none text-dark">
-                <img src="../img/cv6.png" class="img-fluid mb-3" alt="Xpander">
+                <img src="../img/cv6.png" class="img-fluid mb-3">
                 <h5 class="fw-bold">XPANDER</h5>
                 <p class="text-muted">From ₱1,099,000</p>
             </a>
         </div>
 
-    </div>
-</section>
-
-<!--PASSENGER CARS-->
-<section id="passenger" class="container my-5">
-    <h2 class="text-center fw-bold mb-5">PASSENGER CARS</h2>
-    <div class="row text-center g-5">
-
-        <div class="col-md-6">
+        <!-- MIRAGE -->
+        <div class="col-lg-4 col-md-6 col-sm-12 product-item">
             <a href="../products/vehicles/passenger/mirage/mirage.html" class="text-decoration-none text-dark">
-                <img src="../img/pc1.png" class="img-fluid mb-3" alt="Mirage">
+                <img src="../img/pc1.png" class="img-fluid mb-3">
                 <h5 class="fw-bold">MIRAGE</h5>
                 <p class="text-muted">From ₱720,000</p>
             </a>
         </div>
 
-        <div class="col-md-6">
+        <!-- MIRAGE G4 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 product-item">
             <a href="../products/vehicles/passenger/mirageg4/mirageg4.html" class="text-decoration-none text-dark">
-                <img src="../img/pc2.png" class="img-fluid mb-3" alt="Mirage G4">
+                <img src="../img/pc2.png" class="img-fluid mb-3">
                 <h5 class="fw-bold">MIRAGE G4</h5>
                 <p class="text-muted">From ₱793,000</p>
             </a>
         </div>
 
-    </div>
-
-</section>
-
-<!--TRUCKS AND BUSES-->
-<section id="trucks" class="container my-5">
-    <h2 class="text-center fw-bold mb-5">TRUCKS & BUSES</h2>
-    <div class="row text-center g-5">
-
-        <div class="col-md-4 mx-auto">
+        <!-- CANTER -->
+        <div class="col-lg-4 col-md-6 col-sm-12 product-item">
             <a href="../products/vehicles/trucks/canter.html" class="text-decoration-none text-dark">
-                <img src="../img/t1.png" class="img-fluid mb-3" alt="Canter">
+                <img src="../img/t1.png" class="img-fluid mb-3">
                 <h5 class="fw-bold">CANTER</h5>
                 <p class="text-muted">From ₱1,245,000</p>
             </a>
         </div>
 
     </div>
+
 </section>
 
 <!-- Footer -->
@@ -187,6 +191,21 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function searchProducts() {
+    let input = document.getElementById("productSearch").value.toLowerCase();
+    let products = document.getElementsByClassName("product-item");
 
+    for (let i = 0; i < products.length; i++) {
+        let name = products[i].innerText.toLowerCase();
+
+        if (name.includes(input)) {
+            products[i].style.display = "";
+        } else {
+            products[i].style.display = "none";
+        }
+    }
+}
+</script>
 </body>
 </html>
