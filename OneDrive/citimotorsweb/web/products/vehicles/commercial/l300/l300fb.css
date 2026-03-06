@@ -262,3 +262,24 @@
         margin-top: 20px;
     }
 }
+
+.features-row{
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    padding:15px 0;
+}
+
+.feature-item{
+    flex:1;
+    font-size:14px;
+    font-weight:600;
+}
+
+.feature-item i{
+    font-size:22px;
+    display:block;
+    margin-bottom:5px;
+}
