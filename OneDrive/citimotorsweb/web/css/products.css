@@ -338,3 +338,18 @@ footer {
   border-top: 1px solid #333;
   padding-top: 20px;
 }
+
+.product-item {
+    transition: all 0.3s ease;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.product-item:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    transform: translateY(-5px);
+}
+
+.product-item:hover img {
+    filter: brightness(1.1);
+}
