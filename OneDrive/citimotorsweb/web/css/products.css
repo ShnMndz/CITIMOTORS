@@ -293,7 +293,7 @@ footer {
     margin-bottom: 10px;
     opacity: 0.9;
 }
-
+/* Footer */
 .footer {
   background-color: #000;
   color: #fff;
@@ -338,7 +338,7 @@ footer {
   border-top: 1px solid #333;
   padding-top: 20px;
 }
-
+/* product hover */
 .product-item {
     transition: all 0.3s ease;
     padding: 15px;
@@ -353,3 +353,4 @@ footer {
 .product-item:hover img {
     filter: brightness(1.1);
 }
+

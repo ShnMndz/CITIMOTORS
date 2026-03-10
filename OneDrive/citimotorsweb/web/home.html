@@ -12,6 +12,7 @@
 
 </head>
 <body>
+  
 
 <!-- Navbar -->
 <nav class="navbar navbar-light bg-light shadow-sm">
@@ -86,64 +87,80 @@
     </div>
 </section>
 
-<!-- Featured Vehicles -->
+<!-- Featured Vehicles Carousel -->
 <section class="container my-5">
-    <div class="text-center mb-5">
+
+    <div class="text-center mb-4">
         <h2 class="fw-bold text-danger">Featured Vehicles</h2>
         <p class="text-muted">Explore our most popular models</p>
     </div>
 
-    <div class="row g-4">
+    <div id="vehicleCarousel" class="carousel slide" data-bs-ride="carousel">
 
-        <!-- Poster 1 -->
-        <div class="col-md-4">
-            <div class="vehicle-poster">
-                <img src="img/homecar1.png" alt="Triton">
+        <div class="carousel-inner">
 
-                <div class="poster-content">
-                    <h4>Triton</h4>
-                    <p>Built for Adventure</p>
-                    <a href="products/vehicles/commercial/triton/triton.html"
-                       class="btn btn-danger btn-sm">
-                        Learn More
-                    </a>
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="vehicle-slide">
+                    <img src="img/homecar1.png" class="d-block w-100" alt="Triton">
+
+                    <div class="carousel-caption">
+                        <h3>Triton</h3>
+                        <p>Built for Adventure</p>
+                        <a href="products/vehicles/commercial/triton/triton.html"
+                           class="btn btn-danger">
+                           Learn More
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Poster 2 -->
-        <div class="col-md-4">
-            <div class="vehicle-poster">
-                <img src="img/homecar2.png" alt="Montero Sport">
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="vehicle-slide">
+                    <img src="img/homecar2.png" class="d-block w-100" alt="Montero Sport">
 
-                <div class="poster-content">
-                    <h4>Montero Sport</h4>
-                    <p>Power & Performance</p>
-                    <a href="products/vehicles/commercial/monterosport/monterosport.html"
-                       class="btn btn-danger btn-sm">
-                        Learn More
-                    </a>
+                    <div class="carousel-caption">
+                        <h3>Montero Sport</h3>
+                        <p>Power & Performance</p>
+                        <a href="products/vehicles/commercial/monterosport/monterosport.html"
+                           class="btn btn-danger">
+                           Learn More
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Poster 3 -->
-        <div class="col-md-4">
-            <div class="vehicle-poster">
-                <img src="img/homecar3.png" alt="Mirage G4">
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="vehicle-slide">
+                    <img src="img/homecar3.png" class="d-block w-100" alt="Mirage G4">
 
-                <div class="poster-content">
-                    <h4>Mirage G4</h4>
-                    <p>Compact & Efficient</p>
-                    <a href="products/vehicles/passenger/mirageg4/mirageg4.html"
-                       class="btn btn-danger btn-sm">
-                        Learn More
-                    </a>
+                    <div class="carousel-caption">
+                        <h3>Mirage G4</h3>
+                        <p>Compact & Efficient</p>
+                        <a href="products/vehicles/passenger/mirageg4/mirageg4.html"
+                           class="btn btn-danger">
+                           Learn More
+                        </a>
+                    </div>
                 </div>
             </div>
+
         </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#vehicleCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#vehicleCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
 
     </div>
+
+</section>
 
     <section class="blog-section">
   <div class="container">
@@ -155,34 +172,34 @@
 
       <!-- Blog Post 1 -->
       <div class="blog-card">
-        <img src="images/blog1.jpg" alt="Mitsubishi Xpander Review">
+        <img src="img/blog1.png" alt="Mitsubishi Xpander Review">
         <div class="blog-content">
-          <span class="blog-date">March 5, 2026</span>
-          <h3>Why the Mitsubishi Xpander is Perfect for Families</h3>
+          <span class="blog-date">February 26, 2026</span>
+          <h3>Mitsubishi Xpander Takes the Crown: Philippines’ No. 1 Selling Vehicle of 2025 and Best-Selling MPV for Three Consecutive Years</h3>
           <p>Discover the features, comfort, and performance that make the Xpander a top choice for family driving.</p>
-          <a href="blog-single.html" class="read-more">Read More →</a>
+          <a href="https://www.mitsubishi-motors.com.ph/articles/xpander-best-selling-vehicle-2025" class="read-more">Read More →</a>
         </div>
       </div>
 
       <!-- Blog Post 2 -->
       <div class="blog-card">
-        <img src="images/blog2.jpg" alt="Car Maintenance">
+        <img src="img/blog2.png" alt="Car Maintenance">
         <div class="blog-content">
           <span class="blog-date">February 28, 2026</span>
-          <h3>5 Essential Car Maintenance Tips Every Driver Should Know</h3>
+          <h3>Basic Car Repair Tips</h3>
           <p>Learn how proper maintenance can extend your car's life and improve performance.</p>
-          <a href="blog-single.html" class="read-more">Read More →</a>
+          <a href="https://gomechanic.in/blog/basic-car-repairs-tips"  class="read-more">Read More →</a>
         </div>
       </div>
 
       <!-- Blog Post 3 -->
       <div class="blog-card">
-        <img src="images/blog3.jpg" alt="SUV Buying Guide">
+        <img src="img/blog3.png" alt="SUV Buying Guide">
         <div class="blog-content">
-          <span class="blog-date">February 20, 2026</span>
-          <h3>How to Choose the Right SUV for Your Lifestyle</h3>
-          <p>Looking for an SUV? Here are key factors you should consider before making your decision.</p>
-          <a href="blog-single.html" class="read-more">Read More →</a>
+          <span class="blog-date">January 20, 2022</span>
+          <h3>Questions to Ask Yourself Before Purchasing a New Car</h3>
+          <p>Here are key factors you should consider before making your decision.</p>
+          <a href="https://blogs.crossmap.com/stories/questions-to-ask-yourself-before-purchasing-a-new-car-ynDFcZ77HBIvebQBnJmnx?gad_source=1&gad_campaignid=21177565647&gbraid=0AAAAApF8YP7gLfWBJ3Dt68HHEhZ136fql&gclid=Cj0KCQjw37nNBhDkARIsAEBGI8NKjHa0Vkbai3OFQ5pK6ZGvFSDgcZB2Y9Q4TZutK3cHvLx0vKuOqdMaAp4mEALw_wcB" class="read-more">Read More →</a>
         </div>
       </div>
 
@@ -218,7 +235,7 @@
     <div class="footer-column">
       <h3>Product Vehicles</h3>
       <ul>
-        <li><a href="products/vehicles/commercial/l200/l200.html">DISTINATOR</a></li>
+        <li><a href="products/vehicles/commercial/l200/l200.html">DESTINATOR</a></li>
         <li><a href="products/vehicles/commercial/l300/l300fb.html">L300 FB EXCEED</a></li>
         <li><a href="products/vehicles/commercial/monterosport/monterosport.html">MONTERO SPORT</a></li>
         <li><a href="products/vehicles/commercial/triton/triton.html">TRITON</a></li>

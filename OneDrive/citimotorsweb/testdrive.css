@@ -1,0 +1,65 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HERO */
+
+.hero{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.hero .subtitle{
+    font-size:14px;
+    opacity:0.8;
+}
+
+.breadcrumb{
+    font-size:12px;
+    text-align:left;
+    margin-left:40px;
+}
+
+/* SELECT CAR */
+
+.car-select{
+    background:#efefef;
+    padding:60px 0;
+}
+
+/* CAR CARD */
+
+.car-card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.car-card img{
+    height:140px;
+    object-fit:contain;
+}
+
+.car-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.car-card h5{
+    margin-top:15px;
+    font-weight:600;
+}
+
+.car-card p{
+    font-size:13px;
+    color:#777;
+}

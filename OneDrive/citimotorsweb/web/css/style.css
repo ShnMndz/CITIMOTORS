@@ -200,6 +200,7 @@ footer {
   padding: 50px 10%;
 }
 
+/* Footer */
 .footer-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Always 3 columns */

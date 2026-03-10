@@ -271,3 +271,15 @@ footer {
   text-decoration:none;
   font-weight:bold;
 }
+
+.vehicle-slide img{
+    height:450px;
+    object-fit:cover;
+}
+
+.carousel-caption{
+    background:rgba(0,0,0,0.5);
+    padding:20px;
+    border-radius:10px;
+}
+
