@@ -1,84 +1,5 @@
- /* ===== Page Fade In Animation ===== */
-
+/* ===== GLOBAL ===== */
 body {
-    animation: pageFadeIn 1.2s ease-in-out forwards;
-    opacity: 0;
-}
-
-/* Keyframes */
-@keyframes pageFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}   
-    
-    
-    
-    /* ===== Branch Panels ===== */
-        .branch-panel {
-    min-height: 100vh;           /* full viewport height */
-    background: linear-gradient(135deg, #111, #222);
-    display: flex;
-    align-items: flex-start;      /* top align to remove extra white space */
-    justify-content: center;
-    padding-top: 50px;            /* optional top spacing inside panel */
-    padding-bottom: 50px;
-}
-
-.branch-info {
-    max-width: 500px;
-}
-
-        /* ===== Vision Split Section ===== */
-        .vision-section {
-            min-height: 100vh;
-        }
-
-        .vision-text {
-            background: #000;
-            color: #fff;
-            padding: 80px 60px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .vision-text h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-        }
-
-        .vision-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .vision-section .row {
-            min-height: 100vh;
-        }
-
-        .vision-map {
-            height: 100vh;
-            padding: 0;
-        }
-
-        .vision-map iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-            display: block;
-        }
-
-        /* ===== Global ===== */
-       body {
     font-family: "Segoe UI", Arial, sans-serif;
     background: #f8fafc;
     scroll-behavior: smooth;
@@ -88,104 +9,149 @@ body {
     opacity: 0;
 }
 
-        /* ===== Navbar ===== */
-        .navbar {
-            backdrop-filter: blur(10px);
-            background: rgba(255,255,255,0.9) !important;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .navbar-brand img {
-            height: 70px;
-            transition: transform 0.3s ease;
-        }
-
-        .navbar-brand img:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-link-custom {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            padding: 6px 12px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .nav-link-custom:hover {
-            color: #E20000;
-            background: rgba(226,0,0,0.08);
-        }
-
-        .active-link {
-            color: #E20000;
-            font-weight: bold;
-            background: rgba(226,0,0,0.1);
-        }
-
-        .dropdown-menu {
-            border: none;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .dropdown-item {
-            padding: 10px 16px;
-            transition: all 0.2s ease;
-        }
-
-        .dropdown-item:hover {
-            background: #E20000;
-            color: #fff;
-        }
-
-        /* ===== Footer ===== */
-        footer {
-            background: linear-gradient(135deg, #111, #222);
-            letter-spacing: 1px;
-            margin-top: 80px;
-        }
-
-        /* Footer */
-footer {
-    background: linear-gradient(135deg, #111, #222);
-    color: white;
-    text-align: center;
-    letter-spacing: 1px;
-    margin-top: 80px;
-    padding: 15px 0;
+/* ===== ANIMATIONS ===== */
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-thumb { background: #E20000; border-radius: 10px; }
-::-webkit-scrollbar-track { background: #eee; }
+/* ===== NAVBAR ===== */
+.navbar {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.9) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
 
-/* Poster Card */
+.navbar-brand img {
+    height: 70px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+.nav-link-custom {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    color: #E20000;
+    background: rgba(226,0,0,0.08);
+}
+
+.active-link {
+    color: #E20000;
+    font-weight: bold;
+    background: rgba(226,0,0,0.1);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: #E20000;
+    color: #fff;
+}
+
+/* ===== BRANCH SECTION ===== */
+.branch-panel {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #111, #222);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.branch-info {
+    max-width: 500px;
+}
+
+/* ===== VISION SECTION ===== */
+.vision-section {
+    min-height: 100vh;
+}
+
+.vision-section .row {
+    min-height: 100vh;
+}
+
+.vision-text {
+    background: #000;
+    color: #fff;
+    padding: 80px 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vision-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.vision-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.vision-map {
+    height: 100vh;
+    padding: 0;
+}
+
+.vision-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* ===== VEHICLE POSTER ===== */
 .vehicle-poster {
     position: relative;
-    height: 450px; /* Poster height */
+    height: 450px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
 }
 
-/* Hover Effect */
 .vehicle-poster:hover {
     transform: translateY(-10px);
 }
 
-/* Image */
 .vehicle-poster img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Dark Overlay */
 .vehicle-poster::after {
     content: "";
     position: absolute;
@@ -197,7 +163,7 @@ footer {
     );
 }
 
-/* Text Content */
+/* Poster Content */
 .poster-content {
     position: absolute;
     bottom: 25px;
@@ -218,48 +184,67 @@ footer {
     opacity: 0.9;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
+footer,
 .footer {
-  background-color: #000;
-  color: #fff;
-  padding: 50px 10%;
+    background: linear-gradient(135deg, #111, #222);
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 80px;
+    padding: 15px 0;
 }
 
+/* Footer Layout */
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
-  gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
 
 .footer-column h3 {
-  margin-bottom: 15px;
-  font-size: 18px;
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
 .footer-column ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-column ul li {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .footer-column ul li a {
-  text-decoration: none;
-  color: #ccc;
-  font-size: 14px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
 }
 
 .footer-column ul li a:hover {
-  color: #fff;
+    color: #fff;
 }
 
 .footer-bottom {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 13px;
-  color: #aaa;
-  border-top: 1px solid #333;
-  padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E20000;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee;
 }
