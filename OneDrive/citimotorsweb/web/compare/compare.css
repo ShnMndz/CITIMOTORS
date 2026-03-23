@@ -86,97 +86,78 @@ body {
     color: #fff;
 }
 
-/*---Price-----*/
- body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background: #0a0a0a;
-            color: #fff;
-        }
+/* Ensure navbar is above hero section */
+.navbar {
+    position: relative;  /* or sticky/fixed if needed */
+    z-index: 1050;       /* Bootstrap dropdowns use 1000 by default */
+}
 
-        /* Header */
-        .header {
-            background: linear-gradient(90deg, #000, #1a1a1a);
-            padding: 20px 40px;
-            border-bottom: 3px solid #e60012;
-        }
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 300px;
+    background: url('../img/803fd4a2-564b-4f99-bdf4-3f2736fe0591.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 1;  /* Make sure it's behind navbar */
+}
 
-        .header h1 {
-            margin: 0;
-            font-family: 'Orbitron', sans-serif;
-            color: #fff;
-            letter-spacing: 2px;
-        }
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1; /* Overlay stays behind content but behind navbar */
+}
 
-        .header span {
-            color: #e60012;
-        }
-
-        /* Container */
-        .container {
-            padding: 40px;
-        }
-
-        /* Table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            overflow: hidden;
-            border: 1px solid #333;
-        }
-
-        th {
-            background: #e60012;
-            color: #fff;
-            text-align: left;
-            padding: 15px;
-            font-size: 16px;
-        }
-
-        td {
-            padding: 14px;
-            border-bottom: 1px solid #222;
-            font-size: 15px;
-        }
-
-        tr:nth-child(even) {
-            background: #111;
-        }
-
-        tr:nth-child(odd) {
-            background: #000;
-        }
-
-        tr:hover {
-            background: #1f1f1f;
-            transition: 0.3s;
-        }
-
-        .price {
-            text-align: right;
-            font-weight: 500;
-            color: #e60012;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            font-size: 13px;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            th, td {
-                font-size: 13px;
-            }
-        }
+.hero-section .hero-content {
+    position: relative;
+    z-index: 2; /* Text above overlay */
+}
 
 
+/*-- Compare Table --*/
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #1c1c1c, #3a3a3a);
+    color: #fff;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.compare-table {
+    background-color: #fff;
+    color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.compare-table th, .compare-table td {
+    border: 1px solid #ccc !important;
+    vertical-align: middle;
+}
+
+.compare-table th {
+    font-weight: 600;
+}
+
+.vehicle-img {
+    max-height: 150px;
+    object-fit: contain;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+    text-align: left;
+    margin: 0;
+}
 
 /* =====================================================
    FOOTER
